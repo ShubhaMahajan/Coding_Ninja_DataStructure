@@ -1,4 +1,4 @@
-
+//using XOR property
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -32,6 +32,7 @@ public class Main {
 
 }
 
+// Using hash map
 /*
 import java.util.*;
 import java.lang.*;
