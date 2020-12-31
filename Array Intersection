@@ -1,0 +1,49 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main {
+
+	static Scanner s = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int size = s.nextInt();
+		int[] ar = new int[size];
+		int[] ar1 = new int[size];
+		for (int i = 0; i < size; i++) {
+			System.out.println("Enter first array element " + i);
+			ar[i] = s.nextInt();
+			System.out.println("Enter second array element  " + i);
+
+			ar1[i] = s.nextInt();
+		}
+
+		ArrayIntersection(ar, ar1);
+	}
+
+	public static void ArrayIntersection(int[] arr, int[] ar1) {
+
+		Arrays.sort(arr);
+		Arrays.sort(ar1);
+
+		int m = arr.length;
+		int n = ar1.length;
+		int i = 0;
+		int j = 0;
+
+		while (i < n && j < m) {
+
+			if (arr[i] == ar1[j]) {
+				System.out.println(arr[i] + " ");
+			}
+
+			if (arr[i] < ar1[j]) {
+				i += 1;
+			} else {
+				j += 1;
+			}
+		}
+	}
+
+}
