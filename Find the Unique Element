@@ -14,6 +14,40 @@ public class Main {
 		for (int i = 0; i < size; i++) {
 			ar[i] = s.nextInt();
 		}
+		 
+		UniqueElement(ar);
+	}
+
+	public static void UniqueElement(int[] arr) {
+		
+		int xor =0;
+	 for(int i=0;i<arr.length;i++) {
+		 
+		 xor ^=arr[i];
+		 
+	 }
+	 System.out.println(xor);
+
+	}
+
+}
+
+/*
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main {
+
+	static Scanner s = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int size = s.nextInt();
+		int[] ar = new int[size];
+
+		for (int i = 0; i < size; i++) {
+			ar[i] = s.nextInt();
+		}
 
 		UniqueElement(ar);
 	}
@@ -42,3 +76,5 @@ public class Main {
 	}
 
 }
+
+*/
