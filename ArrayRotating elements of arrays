@@ -1,0 +1,47 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main {
+
+	static Scanner s = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int size = s.nextInt();
+		int[] ar = new int[size];
+		System.out.println("Rotate count number");
+	 int rotate = s.nextInt();
+	 // Taking inputs from users 
+		for (int i = 0; i < size; i++) {
+			System.out.println("Enter first array element " + i);
+			ar[i] = s.nextInt();
+
+		}
+
+		ArrayRotate(ar,0,ar.length-1);
+		ArrayRotate(ar,0,ar.length-rotate-1);
+		ArrayRotate(ar,ar.length-rotate,ar.length-1);
+		
+		
+		//Printing array
+		for (int i = 0; i < size; i++) {
+			System.out.print(" " + ar[i]);
+		}
+	}
+
+	//Rotating Arrays elements 
+	public static void ArrayRotate(int[] arr, int s, int e) {
+
+		while(s<e) {
+			int temp =arr[s];
+			arr[s]= arr[e];
+			arr[e] = temp;
+			s++;
+			e--;
+		}
+
+
+	}
+
+}
