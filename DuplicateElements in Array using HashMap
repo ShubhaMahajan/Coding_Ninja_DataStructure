@@ -1,0 +1,38 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Main {
+
+	static Scanner s = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int size = s.nextInt();
+		int[] ar = new int[size];
+		int[] ar1 = new int[size];
+		for (int i = 0; i < size; i++) {
+			System.out.println("Enter first array element " + i);
+			ar[i] = s.nextInt();
+
+		}
+
+		DuplicateElements(ar);
+	}
+
+	public static void DuplicateElements(int[] arr) {
+
+		HashMap<Integer, Boolean> map = new HashMap();
+
+		for (Integer a : arr) {
+
+			if (map.containsKey(a)) {
+				System.out.print(a + " ");
+			} else {
+				map.put(a, true);
+			}
+		}
+
+	}
+
+}
