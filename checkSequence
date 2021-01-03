@@ -1,51 +1,59 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 import java.util.Arrays;
 
-public class Solution {
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		String large = s.nextLine();
+		String small = s.nextLine();
+
+		System.out.println(checkSequence(large, small));
+	}
+
 	public static boolean checkSequence(String b, String a) {
-		/* Your class should be named Solution
-		 * Don't write main().
-		 * Don't read input, it is passed as function argument.
-		 * Return output and don't print it.
-		 * Taking input and printing output is handled automatically.
+		/*
+		 * Your class should be named Solution Don't write main(). Don't read input, it
+		 * is passed as function argument. Return output and don't print it. Taking
+		 * input and printing output is handled automatically.
 		 */
-        
-        
-        if(a.length()==0){
-            return true;
-        }
-        if(b.length()==0){
-            return false;
-        }
-        
-        if(a.charAt(0)==b.charAt(0)){
-          return   checkSequence(b.substring(1),a.substring(1));
-        }
-        
-        else{
-          return   checkSequence(b.substring(1),a);
-        }
-        
-  
-        
-        
-//          int m = a.length(); 
-//         int n = b.length(); 
-// 	 int j = 0; 
-        
-//         for (int i = 0; i < n && j < m; i++) {
-            
-       
-//             if (a.charAt(j) == b.charAt(i)) 
-//                 j++; 
-//         }
-        
-//         if(j==m){
-//             return true;
-//         }
-//         else{
-//             return false;
-//         }
-       
-       
-}
+
+		if (a.length() == 0) {
+			return true;
+		}
+		if (b.length() == 0) {
+			return false;
+		}
+
+		if (a.charAt(0) == b.charAt(0)) {
+			return checkSequence(b.substring(1), a.substring(1));
+		}
+
+		else {
+			return checkSequence(b.substring(1), a);
+		}
+
+//	          int m = a.length(); 
+//	         int n = b.length(); 
+//	 	 int j = 0; 
+
+//	         for (int i = 0; i < n && j < m; i++) {
+
+//	             if (a.charAt(j) == b.charAt(i)) 
+//	                 j++; 
+//	         }
+
+//	         if(j==m){
+//	             return true;
+//	         }
+//	         else{
+//	             return false;
+//	         }
+
+	}
 }
